@@ -1,53 +1,13 @@
 #include <iostream>
 #include <stdlib.h>
+#include "exit.h"
+#include "cash.h"
 using namespace std;
-//void method
-void exitP(){
 
-	char res;
-	cout<<endl;
-    cout<<"Would you like to exit the program? [y/n]: " ;
-    cin>>res;
+void exitP();
+int addcash(double y);
 
-    switch(res){
-    case 'y': cout<<"Goodbye!";
-            exit(EXIT_SUCCESS);
-            break;
-    case 'n': 
-            break;
-    default: cout<<"Please enter 1 or 2 only. ";
-             exitP();
-    }
 
-}
-
-int addcash(double y){
-	int x;
-	cout<<endl;
-    cout<<"would like to insert more credit into the machine? [1 -> yes :: 2 -> no]: " ;
-    cin>>x;
-	cout<<endl;
-    switch(x){
-    case 1:	
-			cout<<endl;
-            cout<<"How much credit will you add?";
-            double addedmoney ;
-		    cin>>addedmoney;
-			y = y + addedmoney;
-			cout<<endl;
-			cout << "You have " << y << " RON left";
-			return y;
-			break;
-    case 2: 
-			cout<<endl;
-			cout<<"Goodbye!";
-            exit(EXIT_SUCCESS);
-            break;
-    default: cout<<"Please enter 1 or 2 only. ";
-             break;
-    }
-
-}
 int main(){
 
 	double product1 = 6.0;
