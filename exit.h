@@ -5,10 +5,6 @@
 #include <stdlib.h>
 using namespace std;
 
-
-
-
-
 void exitP(){
 
 	char res;
@@ -22,7 +18,7 @@ void exitP(){
             break;
     case 'n': 
             break;
-    default: cout<<"Please enter 1 or 2 only. ";
+    default: cout<<"Please enter y or n only. ";
              exitP();
     }
 

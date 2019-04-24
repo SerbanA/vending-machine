@@ -1,12 +1,9 @@
 #include <iostream>
 #include <stdlib.h>
 #include "exit.h"
-#include "cash.h"
+#include "addcash.h"
+#include "cashconfirm.h"
 using namespace std;
-
-void exitP();
-int addcash(double y);
-
 
 int main(){
 
@@ -79,8 +76,9 @@ pentakill:
 	}
 	cout<<endl;
 	cout << "Your credit is less than the ammount required 2 purchase a drink.";
-	double dis = addcash(customerMoney);
-	customerMoney = customerMoney + dis;
+	cashconfirm();
+
+	customerMoney = customerMoney + addcash(customerMoney);
 	goto pentakill;
 	cin.ignore();
 	cin.get();
