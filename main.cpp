@@ -77,8 +77,8 @@ pentakill:
 	cout<<endl;
 	cout << "Your credit is less than the ammount required 2 purchase a drink.";
 	cashconfirm();
-
-	customerMoney = customerMoney + addcash(customerMoney);
+	customerMoney = addcash(customerMoney);
+	cout<<customerMoney;
 	goto pentakill;
 	cin.ignore();
 	cin.get();
